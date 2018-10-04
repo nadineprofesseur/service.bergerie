@@ -17,5 +17,4 @@
 	<poids><?=$mouton->poids?></poids>
 	<naissance><?=$mouton->naissance?></naissance>
 	<description><?=$mouton->description?></description>		
-
 </mouton>
