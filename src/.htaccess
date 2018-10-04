@@ -2,11 +2,6 @@ RewriteEngine On
 
 RewriteRule ^mouton/liste/?$  liste-mouton.php
 
-
-
-
-
-
-
-
 RewriteRule ^mouton/([0-9]*)/$ mouton.php?mouton=$1
+
+RewriteRule ^mouton/clochette/statistiques/mois/([0-9]*)/$ statistiques-mois.php?mois=$1
