@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 03 oct. 2018 à 11:46
+-- Généré le :  jeu. 04 oct. 2018 à 08:05
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.1.22
 
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `bergerie`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `clochette`
+--
+
+CREATE TABLE `clochette` (
+  `id` int(11) NOT NULL,
+  `mouton` int(11) NOT NULL,
+  `moment` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `duree` float NOT NULL,
+  `lieu` text NOT NULL,
+  `intensite` float NOT NULL,
+  `repetition` int(11) NOT NULL,
+  `raison` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `clochette`
+--
+
+INSERT INTO `clochette` (`id`, `mouton`, `moment`, `duree`, `lieu`, `intensite`, `repetition`, `raison`) VALUES
+(1, 1, '2018-10-04 15:05:10', 2.5, 'A', 5, 2, ''),
+(2, 1, '2018-10-04 04:00:00', 5, 'B', 9, 3, ''),
+(3, 2, '2018-10-01 04:00:00', 1, 'C', 3, 2, ''),
+(4, 2, '2018-10-03 04:00:00', 10, 'A', 4, 2, '');
 
 -- --------------------------------------------------------
 
@@ -71,6 +98,12 @@ INSERT INTO `troupeau` (`id`, `nom`, `etable`, `description`) VALUES
 --
 
 --
+-- Index pour la table `clochette`
+--
+ALTER TABLE `clochette`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `mouton`
 --
 ALTER TABLE `mouton`
@@ -85,6 +118,12 @@ ALTER TABLE `troupeau`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `clochette`
+--
+ALTER TABLE `clochette`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `mouton`
