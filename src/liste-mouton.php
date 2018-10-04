@@ -21,9 +21,9 @@
 	<mouton>
 		<nom><?=$mouton->nom?></nom>
 		<couleur><?=$mouton->couleur?></couleur>
-		<poids><?=$mouton->couleur?></poids>
+		<poids><?=$mouton->poids?></poids>
 		<naissance><?=$mouton->naissance?></naissance>
-		<description><?=$mouton->naissance?></description>		
+		<description><?=$mouton->description?></description>		
 	</mouton>
 	<?php
 	}
