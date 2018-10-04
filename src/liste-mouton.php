@@ -16,6 +16,9 @@
 	<mouton>
 		<nom><?=$mouton->nom?></nom>
 		<couleur><?=$mouton->couleur?></couleur>
+		<poids><?=$mouton->couleur?></poids>
+		<naissance><?=$mouton->naissance?></naissance>
+		<description><?=$mouton->naissance?></description>		
 	</mouton>
 	<?php
 	}
