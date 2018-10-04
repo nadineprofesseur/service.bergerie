@@ -1,4 +1,6 @@
 <?php 
+	header("Content-type: text/xml");
+	echo '<?xml version="1.0" encoding="UTF-8"?>';
 
 	include "connection.php";
 	$SQL_LISTE_MOUTONS = "SELECT * FROM mouton";
@@ -6,8 +8,11 @@
 	$requeteListeMoutons->execute();
 	$listeMoutons = $requeteListeMoutons->fetchAll(PDO::FETCH_OBJ);
 	//print_r($listeMoutons);
+	
 ?>
-<moutons><description>Liste des moutons</description>
+
+<moutons>
+	<description>Liste des moutons</description>
 
 <?php
 	foreach($listeMoutons as $mouton)
